@@ -1,0 +1,43 @@
+{
+    "language": "TypeScript",
+    "dependency_file": "package.json",
+    "dependencies": ["three", "@types/three"],
+    "files": [
+        {
+            "path": "src/DeinosuchusVisualizer.ts",
+            "description": "Main class for visualizing and analyzing Deinosuchus skeleton",
+            "exports": ["class DeinosuchusVisualizer"]
+        },
+        {
+            "path": "src/SkeletonData.ts",
+            "description": "Defines the skeletal structure and measurements for Deinosuchus",
+            "exports": ["interface SkeletonData", "class DeinosuchusSkeleton"]
+        },
+        {
+            "path": "src/BiomechanicsAnalyzer.ts",
+            "description": "Analyzes biomechanical properties of the skeleton",
+            "exports": ["class BiomechanicsAnalyzer"]
+        },
+        {
+            "path": "src/ComparativeAnalyzer.ts",
+            "description": "Provides comparative analysis with modern crocodilians",
+            "exports": ["class ComparativeAnalyzer"]
+        },
+        {
+            "path": "src/VisualizationEngine.ts",
+            "description": "Handles 3D rendering and visualization logic using Three.js",
+            "exports": ["class VisualizationEngine"]
+        },
+        {
+            "path": "src/index.ts",
+            "description": "Entry point for the application",
+            "imports_from_other_files": [
+                "DeinosuchusVisualizer.ts",
+                "SkeletonData.ts",
+                "BiomechanicsAnalyzer.ts",
+                "ComparativeAnalyzer.ts",
+                "VisualizationEngine.ts"
+            ]
+        }
+    ]
+}
